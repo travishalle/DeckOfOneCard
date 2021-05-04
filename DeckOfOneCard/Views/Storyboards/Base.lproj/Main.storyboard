@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="owK-uq-Ceh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="yLy-vT-Pgz">
+            <objects>
+                <viewController id="owK-uq-Ceh" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KKr-Na-AFh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KNa-52-QsI">
+                                <rect key="frame" x="52" y="220" width="310.5" height="466"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KNa-52-QsI" secondAttribute="height" multiplier="2:3" id="hPA-pX-Cby"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E93-1N-nb6">
+                                <rect key="frame" x="52" y="718" width="310.5" height="30"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawButtonPressed:" destination="owK-uq-Ceh" eventType="touchUpInside" id="Utz-Md-OZ0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(card)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OL1-4F-toE">
+                                <rect key="frame" x="52" y="167.5" width="310.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wmQ-aI-GTs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KNa-52-QsI" firstAttribute="centerX" secondItem="wmQ-aI-GTs" secondAttribute="centerX" id="6Pl-PX-Cql"/>
+                            <constraint firstItem="KNa-52-QsI" firstAttribute="width" secondItem="KKr-Na-AFh" secondAttribute="width" multiplier="0.75" id="Gab-wd-PdK"/>
+                            <constraint firstItem="E93-1N-nb6" firstAttribute="width" secondItem="KKr-Na-AFh" secondAttribute="width" multiplier="0.75" id="R2s-13-hx3"/>
+                            <constraint firstItem="OL1-4F-toE" firstAttribute="centerX" secondItem="wmQ-aI-GTs" secondAttribute="centerX" id="iDJ-AA-fKl"/>
+                            <constraint firstItem="OL1-4F-toE" firstAttribute="width" secondItem="KKr-Na-AFh" secondAttribute="width" multiplier="0.75" id="mTe-Uq-lCM"/>
+                            <constraint firstItem="E93-1N-nb6" firstAttribute="top" secondItem="KNa-52-QsI" secondAttribute="bottom" constant="32" id="opj-NT-QyM"/>
+                            <constraint firstItem="KNa-52-QsI" firstAttribute="centerY" secondItem="wmQ-aI-GTs" secondAttribute="centerY" id="p1q-kw-COj"/>
+                            <constraint firstItem="KNa-52-QsI" firstAttribute="top" secondItem="OL1-4F-toE" secondAttribute="bottom" constant="32" id="ub3-Fb-Zqh"/>
+                            <constraint firstItem="E93-1N-nb6" firstAttribute="centerX" secondItem="wmQ-aI-GTs" secondAttribute="centerX" id="ytC-HC-HZu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="KNa-52-QsI" id="UMO-dK-Umx"/>
+                        <outlet property="cardLabel" destination="OL1-4F-toE" id="yga-dy-6Sg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShK-wE-BjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
